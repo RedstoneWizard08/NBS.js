@@ -11,9 +11,8 @@ jobs:
                   registry-url: "https://npm.pkg.github.com"
                   scope: "@redstonewizard08"
             - run: |
-                  node scripts/preci.js
                   npm install
                   npm ci
-                  npm publish
+                  npm build:publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
